@@ -2,7 +2,6 @@ package com.example.loginotp.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.time.LocalDateTime;
 
 @Entity
@@ -26,4 +25,7 @@ public class User {
     private LocalDateTime blockUntil;
 
     private boolean isVerified;
+
+    @Version
+    private Integer version; // <--- Optimistic Locking
 }

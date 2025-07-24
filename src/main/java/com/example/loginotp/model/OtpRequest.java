@@ -2,7 +2,6 @@ package com.example.loginotp.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.time.LocalDateTime;
 
 @Entity
@@ -30,4 +29,7 @@ public class OtpRequest {
     private int failedAttempts;
 
     private LocalDateTime blockUntil;
+
+    @Version
+    private Integer version; // <--- Optimistic Locking
 }
