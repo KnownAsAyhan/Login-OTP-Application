@@ -89,7 +89,6 @@ public class OtpService {
         otpRepo.save(otp);
         return "OTP verified successfully.";
     }
-
     private String generateOtp() {
         return String.valueOf(new Random().nextInt(9000) + 1000);
     }
